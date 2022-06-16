@@ -23,23 +23,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseMiddleware<ErrorHandlerMiddleware>();
-//app.UseExceptionHandler(
-//    options =>
-//    {
-//        options.Run(
-//            async context =>
-//            {
-//                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-//                context.Response.ContentType = "text/html";
-//                var exceptionObject = context.Features.Get<IExceptionHandlerFeature>();
-//                if (null != exceptionObject)
-//                {
-//                    var errorMessage = $"{exceptionObject.Error.Message}";
-//                    await context.Response.WriteAsync(errorMessage).ConfigureAwait(false);
-//                }
-//            });
-//    }
-//);
 
 app.UseAuthorization();
 
